@@ -43,6 +43,7 @@ def main(screen):
             cast["invaders"].append(invader)
     
     cast["beams"] = []
+    cast["invader_beams"] = []
     
     gamescore = Gamescore(len(cast["invaders"]))
 
