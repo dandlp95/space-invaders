@@ -51,13 +51,14 @@ def main(screen):
     input_service = InputService(screen)
     output_service = OutputService(screen)
     control_actors_action = ControlActorsAction(input_service)
+    weapon = Weapon()
     move_actors_action = MoveActorsAction()
     handle_collisions_action = HandleCollisionsAction(screen, gamescore)
     draw_actors_action = DrawActorsAction(output_service)
-    weapon = Weapon()
+ 
     
     script["input"] = [control_actors_action]
-    script["update"] = [move_actors_action, handle_collisions_action, weapon]
+    script["update"] = [weapon, move_actors_action, handle_collisions_action]
     script["output"] = [draw_actors_action]
 
     # start the game

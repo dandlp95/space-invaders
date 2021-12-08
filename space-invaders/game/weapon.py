@@ -11,13 +11,14 @@ class Weapon:
 
             beam = Actor()
             velocity = ship.get_beam_velocity()
-            beam.set_position = ship.get_position()
+            position = ship.get_position()
+            beam.set_position(position)
             beam.set_text("|")
             beam.set_velocity(velocity)
             
             # We remove the previous beam in the array and add the new one.
-            cast["beam"] = []
-            cast["beam"].append(beam)
+            
+            cast["beams"].append(beam)
 
 
 

@@ -34,7 +34,11 @@ class InputService:
         if isinstance(event, KeyboardEvent):
             if event.key_code == 27:
                 sys.exit()
-            direction = self._keys.get(event.key_code, Point(0, 0))
+            # Otherwise is going to return the boolena corresponding to
+            # wether the ship needs to shoot or not.
+            elif event.key_code != 112:
+                direction = self._keys.get(event.key_code, Point(0, 0))
+
         return direction
     
     def is_shooting(self):
@@ -44,12 +48,12 @@ class InputService:
         """
         is_shooting = False
         event = self._screen.get_event()
-        
 
         if isinstance(event, KeyboardEvent):
             if event.key_code == 27:
                 sys.exit()
-            is_shooting = self._keys.get(event.key_code, False)
+            elif event.key_code == 112:    
+                is_shooting = self._keys.get(event.key_code, False)
         return is_shooting
 
 
