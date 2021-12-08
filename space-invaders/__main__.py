@@ -12,6 +12,7 @@ from asciimatics.screen import Screen
 from game.game_score import Gamescore
 from game.ship import Ship
 from game.weapon import Weapon
+from game.ai import Ai
 from game import constants
 
 
@@ -35,12 +36,15 @@ def main(screen):
     for x in range(20, 55,4):
         for y in range(2,6):
             ship_position = Point(x, y)
+            ship_velocity = Point(-2, 0)
             beam_velocity = Point(0,1)
             invader = Ship()
             invader.set_position(ship_position)
             invader.set_text("(0)")
             invader.set_beam_velocity(beam_velocity)
+            invader.set_velocity(ship_velocity)
             cast["invaders"].append(invader)
+
     
     cast["beams"] = []
     cast["invader_beams"] = []
@@ -56,10 +60,11 @@ def main(screen):
     move_actors_action = MoveActorsAction()
     handle_collisions_action = HandleCollisionsAction(screen, gamescore)
     draw_actors_action = DrawActorsAction(output_service)
+    ai = Ai()
  
     
     script["input"] = [control_actors_action]
-    script["update"] = [weapon, move_actors_action, handle_collisions_action]
+    script["update"] = [weapon, ai, move_actors_action, handle_collisions_action]
     script["output"] = [draw_actors_action]
 
     # start the game
