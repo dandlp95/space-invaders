@@ -7,8 +7,8 @@ class Ai:
     """Makes automatic movements for NPC"""
 
     def __init__(self):
-        self._move_left = Point(-2, 0)
-        self._move_right = Point(2, 0)
+        self._move_left = Point(-1, 0)
+        self._move_right = Point(1, 0)
     
     def get_velocities(self):
 

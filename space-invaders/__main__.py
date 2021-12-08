@@ -36,7 +36,7 @@ def main(screen):
     for x in range(20, 55,4):
         for y in range(2,6):
             ship_position = Point(x, y)
-            ship_velocity = Point(-2, 0)
+            ship_velocity = Point(-1, 0)
             beam_velocity = Point(0,1)
             invader = Ship()
             invader.set_position(ship_position)
