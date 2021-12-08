@@ -1,5 +1,5 @@
 import random
-from game.constants import constants
+from game import constants
 from game.action import Action
 from game.point import Point
 from game.game_score import Gamescore

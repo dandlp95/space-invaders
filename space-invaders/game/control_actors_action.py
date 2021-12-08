@@ -1,5 +1,7 @@
-from game.constants import constants
+from game import constants
 from game.action import Action
+from game.actor import Actor
+from game.point import Point
 
 class ControlActorsAction(Action):
     """A code template for controlling actors. The responsibility of this
@@ -26,4 +28,15 @@ class ControlActorsAction(Action):
         Args:
             cast (dict): The game actors {key: tag, value: list}.
         """
-        pass
+        direction = self._input_service.get_direction()
+        is_shooting = self._input_service.is_shooting()
+        ship = cast["player_ship"][0]
+        ship.set_velocity(direction)
+        ship.set_shooting(is_shooting)
+
+            
+
+
+
+
+

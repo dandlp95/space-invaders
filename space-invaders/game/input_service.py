@@ -19,6 +19,9 @@ class InputService:
         self._keys = {}
         self._keys[97] = Point(-5, 0) # a
         self._keys[100] = Point(5, 0) # d
+        self._keys[112] = True
+    
+
         
     def get_direction(self):
         """Gets the selected direction for the given player.
@@ -33,3 +36,25 @@ class InputService:
                 sys.exit()
             direction = self._keys.get(event.key_code, Point(0, 0))
         return direction
+    
+    def is_shooting(self):
+        """Indicates if an actor is shooting beams.
+        
+        Returns True or False.
+        """
+        is_shooting = False
+        event = self._screen.get_event()
+        
+
+        if isinstance(event, KeyboardEvent):
+            if event.key_code == 27:
+                sys.exit()
+            is_shooting = self._keys.get(event.key_code, False)
+        return is_shooting
+
+
+
+            
+
+
+

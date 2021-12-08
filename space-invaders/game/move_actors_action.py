@@ -1,4 +1,4 @@
-from game.constants import constants
+from game import constants
 from game.action import Action
 from game.point import Point
 
@@ -23,6 +23,8 @@ class MoveActorsAction(Action):
             for actor in group:
                 if not actor.get_velocity().is_zero():
                     self._move_actor(actor)
+                
+                
 
     def _move_actor(self, actor):
         """Moves the given actor to its next position according to its 
@@ -41,3 +43,4 @@ class MoveActorsAction(Action):
         y = y1 + y2
         position = Point(x, y)
         actor.set_position(position)
+    
