@@ -23,23 +23,22 @@ class InputService:
     
 
         
-    def get_direction(self):
+    def get_input(self):
         """Gets the selected direction for the given player.
 
         Returns:
             Point: The selected direction.
         """
-        direction = Point(0, 0)
+        input = Point(0, 0)
         event = self._screen.get_event()
         if isinstance(event, KeyboardEvent):
             if event.key_code == 27:
                 sys.exit()
             # Otherwise is going to return the boolena corresponding to
             # wether the ship needs to shoot or not.
-            elif event.key_code != 112:
-                direction = self._keys.get(event.key_code, Point(0, 0))
+            input = self._keys.get(event.key_code, Point(0, 0))
 
-        return direction
+        return input
     
     def is_shooting(self):
         """Indicates if an actor is shooting beams.
