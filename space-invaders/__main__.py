@@ -14,6 +14,7 @@ from game.ship import Ship
 from game.weapon import Weapon
 from game.ai import Ai
 from game import constants
+from game.terminate_game import Terminate
 
 
 def main(screen):
@@ -28,7 +29,7 @@ def main(screen):
     player_ship = Ship()
     player_ship.set_position(ship_position)
     player_ship.set_beam_velocity(beam_velocity)
-    player_ship.set_text("^")
+    player_ship.set_text("(^)")
 
     cast["player_ship"] = [player_ship]
 
@@ -49,7 +50,7 @@ def main(screen):
     cast["beams"] = []
     cast["invader_beams"] = []
     
-    gamescore = Gamescore(len(cast["invaders"]))
+    gamescore = Gamescore()
 
     # create the script {key: tag, value: list}
     script = {}
@@ -61,10 +62,11 @@ def main(screen):
     handle_collisions_action = HandleCollisionsAction(screen, gamescore)
     draw_actors_action = DrawActorsAction(output_service)
     ai = Ai()
+    terminate = Terminate(gamescore)
  
     
     script["input"] = [control_actors_action]
-    script["update"] = [weapon, ai, move_actors_action, handle_collisions_action]
+    script["update"] = [weapon, ai, move_actors_action, handle_collisions_action, terminate]
     script["output"] = [draw_actors_action]
 
     # start the game

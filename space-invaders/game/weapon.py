@@ -1,5 +1,6 @@
 from game.actor import Actor
 import random
+from game.point import Point
 
 
 class Weapon:
@@ -14,6 +15,7 @@ class Weapon:
             beam = Actor()
             velocity = ship.get_beam_velocity()
             position = ship.get_position()
+            position = position.add(Point(1, 0))
             beam.set_position(position)
             beam.set_text("|")
             beam.set_velocity(velocity)
