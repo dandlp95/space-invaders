@@ -27,7 +27,7 @@ class Ai:
             for invader in cast["invaders"]:
                 invader.set_velocity(velocity)
        
-        elif x_position >= (max_x - 3):
+        elif x_position >= (max_x - 30):
             velocity = (self.get_velocities())[0]
 
             for invader in cast["invaders"]:
