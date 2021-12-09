@@ -28,11 +28,16 @@ class ControlActorsAction(Action):
         Args:
             cast (dict): The game actors {key: tag, value: list}.
         """
-        direction = self._input_service.get_direction()
-        is_shooting = self._input_service.is_shooting()
+        input = self._input_service.get_input()
         ship = cast["player_ship"][0]
-        ship.set_velocity(direction)
-        ship.set_shooting(is_shooting)
+
+        if isinstance(input, Point):
+            
+            ship.set_velocity(input)
+        else:
+
+            is_shooting = input
+            ship.set_shooting(is_shooting)
 
             
 

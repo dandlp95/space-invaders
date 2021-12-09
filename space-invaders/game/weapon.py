@@ -19,6 +19,7 @@ class Weapon:
             beam.set_position(position)
             beam.set_text("|")
             beam.set_velocity(velocity)
+            ship.set_shooting(False)
             
             # We remove the previous beam in the array and add the new one.
             
@@ -26,7 +27,7 @@ class Weapon:
         
 
         invaders_array_size = len(cast["invaders"])
-        invader_i = random.randrange(0, invaders_array_size * 20)
+        invader_i = random.randrange(0, invaders_array_size * 6)
         
         if invader_i < invaders_array_size:
             invader_beam = Actor()
