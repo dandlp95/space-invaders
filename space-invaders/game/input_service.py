@@ -54,25 +54,5 @@ class InputService:
 
         return input
 
-# Will probably delete this method
-    def is_shooting(self):
-        """Indicates if an actor is shooting beams.
-        
-        Returns True or False.
-        """
-        is_shooting = False
-        event = self._screen.get_event()
-
-        if isinstance(event, KeyboardEvent):
-            if event.key_code == 27:
-                sys.exit()
-            elif event.key_code == 112:    
-                is_shooting = self._keys.get(event.key_code, False)
-        return is_shooting
-
-
-
-            
-
 
 

@@ -1,4 +1,3 @@
-from game.action import Action
 #
 # Description:
 #   Uses the output service to draw the Actors on the screen, according to its text, speed and 
@@ -19,6 +18,8 @@ from game.action import Action
 #   Action class.
 #   It uses encapsulation because it hides the output_service attribute from the user and can't be accessed directly
 #   by the user.
+from game.action import Action
+
 
 class DrawActorsAction(Action):
     """A code template for drawing actors. The responsibility of this class of

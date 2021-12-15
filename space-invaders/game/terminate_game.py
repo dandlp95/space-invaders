@@ -14,7 +14,7 @@
 #   It uses abstraction by making the game_score attribute unaccessible for the user.
 
 import sys
-from action import Action
+from game.action import Action
 
 class Terminate(Action):
     """Terminates game if player ship is destroyed or if player destroys all 

@@ -19,11 +19,9 @@
 
 
 
-from game.ship import Ship
 from game.point import Point
 from game import constants
 from game.action import Action
-import random
 
 class Ai(Action):
     """Makes automatic movements for NPC"""
