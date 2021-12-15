@@ -1,3 +1,17 @@
+#
+# Description:
+#   The following class obtains the user input according to the keys pressed
+#   by the user.
+#
+# OOP Principles Used:
+#   Abstraction.
+#   Encapsulation.
+#
+# Reasoning:
+#   This class uses abstraction because it hides the complexity of the screen 
+#   detecting user input behind the screen object.
+#   It uses encapsulation by making the values of each key unaccessible for the user.
+
 import sys
 from game.point import Point
 from asciimatics.event import KeyboardEvent
@@ -39,7 +53,8 @@ class InputService:
             input = self._keys.get(event.key_code, Point(0, 0))
 
         return input
-    
+
+# Will probably delete this method
     def is_shooting(self):
         """Indicates if an actor is shooting beams.
         

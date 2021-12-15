@@ -1,6 +1,22 @@
-import sys
+#
+# Description:
+#   The following class is in charge of when and how to end the game.
+#
+# OOP Principles Used:
+#   Polymorphism. 
+#   Abstraction.
+#   Encapsulation
+#
+# Reasoning:
+#   This class uses polymorphism because it alters the Execute method to behave differently.
+#   It uses abstraction because it hides the complexity of tracking the game score by working
+#   with the game_score object and its methods.
+#   It uses abstraction by making the game_score attribute unaccessible for the user.
 
-class Terminate:
+import sys
+from action import Action
+
+class Terminate(Action):
     """Terminates game if player ship is destroyed or if player destroys all 
     invaders.
     """

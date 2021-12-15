@@ -1,3 +1,18 @@
+#
+# Description:
+#   The following class draws the game to the terminal.
+#
+# OOP Principles Used:
+#   Abstraction.
+#   Encapsulation.
+#
+# Reasoning:
+#   This class uses abstraction as it hides the complexity of drawing
+#   the game in the terminal by mostly woring with the screen object provided
+#   by aschiimatics.
+#   It uses encapsulation by making the screen object unaccessible for the user and
+#   only accesible for the methods that need to work with it.
+
 import sys
 from game import constants
 from asciimatics.widgets import Frame

@@ -1,9 +1,27 @@
+#
+# Description:
+#   The following class creates a projectile, an Actor coming from the Ship that 
+#   that "fired it" and sets its velocity towards the opposite direction.
+#
+# OOP Principles Used:
+#   Abstraction.
+#   Polymorphism.
+#   Inheritance.
+#
+# Reasoning:
+#   Polymorphism because the class alters the Execute method actions from the Action class.
+#   Inheritance because it inherits the Action class.
+#   Abstraction because a lot of the complexity behind creating the Actor beam is hidden by 
+#   working with mostly actors and their methods under each if statement.
+
+
 from game.actor import Actor
 import random
 from game.point import Point
+from game.action import Action
 
 
-class Weapon:
+class Weapon(Action):
     
     def execute(self, cast):
 

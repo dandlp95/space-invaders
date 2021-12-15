@@ -1,3 +1,15 @@
+#
+# Description:
+#   The following class holds positions represented by x and y coordinates.
+#
+# OOP Principles Used:
+#   Encapsulation.
+#
+# Reasoning:
+#   This class uses encapsulation as the x and y points are only accessible by 
+#   calling the appropriate methods that return these values.
+
+
 class Point:
     """Represents distance from an origin (0, 0).
 

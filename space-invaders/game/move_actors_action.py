@@ -1,3 +1,20 @@
+#
+# Description:
+#   The following class moves Actors that have a velocity.
+#
+# OOP Principles Used:
+#   Inheritance.
+#   Abstraction.
+#   Polymorphism.
+#
+# Reasoning:
+#   This class uses inheritance because it inherits the Action class.
+#   Polymorphism because it changes the behavior of the Execute method from
+#   the action class.
+#   Abstraction because the execute method hides the complexity of moving
+#   each actor by simpling calling the appropriate method for each object in the 
+#   object array with a for loop.
+
 from game import constants
 from game.action import Action
 from game.point import Point

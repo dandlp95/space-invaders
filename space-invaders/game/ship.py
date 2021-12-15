@@ -1,12 +1,24 @@
+#
+# Description:
+#   The following class represents an actor that can shoot a projectile(represented by a 2D movable
+#    actor.)
+#
+# OOP Principles Used:
+#   Inheritance.
+#   Encapsulation.
+#
+# Reasoning:
+#   This class uses inheritance because it inherits from the Actor class.
+#   It uses encapsulation because the attributes can only be accessed through the methods designed for that.
+
 from game.actor import Actor
 from game.point import Point
-# from game.weapon import Weapon
 
 class Ship(Actor):
     """An Actor that can also shoot beams on command."""
 
     def __init__(self):
-        super().__init__() # Will cause error?
+        super().__init__() 
 
         self._shoot = False
         self._beam_direction = Point(0, 0)

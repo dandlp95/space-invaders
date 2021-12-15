@@ -1,4 +1,24 @@
 from game.action import Action
+#
+# Description:
+#   Uses the output service to draw the Actors on the screen, according to its text, speed and 
+#   position attributes.
+#
+# OOP Principles Used:
+#   Inheritance.
+#   Abstraction.
+#   Polymorphism. 
+#   Encapsulation
+#
+# Reasoning:
+#   This class uses inheritance because it is inheriting from the Action class.
+#   It uses abstraction because the complexity of drawing an object on the screen is hidden with a
+#   simple for loop in the execute method that is simply calling each Actor in the array and putting
+#   it in the ouput_service class which is the class that actually handles all the complexity.
+#   It uses polymorphism because the it changes the behavior of the execute method that was inherited from the
+#   Action class.
+#   It uses encapsulation because it hides the output_service attribute from the user and can't be accessed directly
+#   by the user.
 
 class DrawActorsAction(Action):
     """A code template for drawing actors. The responsibility of this class of

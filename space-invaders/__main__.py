@@ -1,3 +1,16 @@
+#
+# Description:
+#   The following class...
+#
+# OOP Principles Used:
+#   Abstraction.
+#
+# Reasoning:
+#   This document uses abstraction because most of the complexity
+#   behind the game, such as drawing each object, getting user input,
+#   moving each object, etc, is hidden since we are just working with
+#   instances of each class.
+
 import random
 from game.director import Director
 from game.actor import Actor

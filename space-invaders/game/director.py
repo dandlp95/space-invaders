@@ -1,3 +1,20 @@
+#
+# Description:
+#   The following class will direct the game by calling the execute method
+#   for each object in the list.
+#
+# OOP Principles Used:
+#   Abstraction
+#   Polymorphism
+#   Encapsulation
+# Reasoning:
+#   This class uses inheritance abstraction because it is hiding the game's complexity.
+#   All that we can see is that an execute method is being called for each object in whatever
+#   array we passed.
+#   It uses polymorphism as the execute method means something different for each object in the 
+#   array. 
+#   It uses encapsulation as the cast and sript attributes that are passed, are not accessible
+#   for the user. 
 from time import sleep
 from game import constants
 

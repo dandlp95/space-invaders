@@ -1,3 +1,19 @@
+#
+# Description:
+#   The following class belongs to objects that are meant to represent a visible, movable 2D object.
+#   This class will be used by all objects that we will observe in the screen, thus allowing us to
+#   change where they move to, they velocity, and appearance. 
+#
+# OOP Principles Used:
+#   Encapsulation.
+#
+# Reasoning:
+#   This class uses encapsulation because the data cannot be accessed directly. If the position or text
+#   need to be changed, it can be done by using the appropriate methods such as set_position or set_text.
+#
+
+
+
 from game import constants
 from game.point import Point
 

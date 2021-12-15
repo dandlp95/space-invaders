@@ -1,9 +1,20 @@
+#
+# Description:
+#   The following class keeps track of the score of the user.
+#
+# OOP Principles Used:
+#   Encapsulation.
+#
+# Reasoning:
+#   This class uses encapsulation because the score cannot be accessed
+#   directly by the user. It has to be accessed by using the appropriate method
+#   get score. 
+
 class Gamescore():
     """Keeps track of game score
     """
     def __init__(self):
         self._score = 0
-        # self._enemies = enemies
 
     def get_score(self):
         return self._score

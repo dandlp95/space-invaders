@@ -1,3 +1,23 @@
+#
+# Description:
+#   The following class determines what happens when 2 Actors collide with
+#   each other.
+#
+# OOP Principles Used:
+#   Inheritance.
+#   Abstraction.
+#   Polymorphism.
+#   Encapsulation.
+#
+# Reasoning:
+#   This class uses inheritance because in inherits the Action class.
+#   Uses abstraction because at least it partially hides the complexity of the program by working
+#   mostly with objects and their methods.
+#   It uses polymorphism because it changes the behavior of the execute method from the Action class.
+#   It uses encapsulation because the gamescore can't be altered or access by the user. It is just altered
+#   during the execute method.
+
+
 import random
 from game import constants
 from game.action import Action
