@@ -1,4 +1,4 @@
-# CSE210FinalProject
+# Space Invaders project
 For my final project I will replicate the game "Space Invaders" using aschiimatics. 
 
 The game consists of a small ship placed on the lower end of the screen controlled by the user facing upwards. 
