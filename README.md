@@ -1,5 +1,5 @@
 # Space Invaders project
-For my final project I will replicate the game "Space Invaders" using aschiimatics. 
+This project is a replication of the popular game "Space Invaders" using aschiimatics. 
 
 The game consists of a small ship placed on the lower end of the screen controlled by the user facing upwards. 
 The user can control the ship and move it left and right. The user can also make the ship shoot beams upward. 
